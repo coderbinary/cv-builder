@@ -1,0 +1,29 @@
+.navbar{
+  background-color: #444;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  width: fit-content;
+  gap: 1rem;
+  height: fit-content;
+  flex-direction: column;
+  align-self: center;
+  position: absolute;
+}
+.navbar div{
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.navbar div.selected{
+  background-color: #333;
+}
+@media (max-width:915px) {
+  .navbar{
+    flex-direction: row;
+    align-self: center;
+    position: static;
+  }
+  
+}

@@ -1,0 +1,14 @@
+.mainContent{
+  padding-inline: 1rem;
+  flex: 1;
+  display: flex;
+  position: relative;
+  gap: 1rem;
+}
+@media (max-width:915px) {
+  .mainContent{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}

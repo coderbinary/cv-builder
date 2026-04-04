@@ -1,0 +1,43 @@
+.education{
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.education > .education-dropdown{
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.education > .info{
+  padding: 0.5rem 0rem 0rem 0.5rem;
+  overflow: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.education > .info > .add-more{
+  background:transparent;
+  border: none;
+  color: #ddd;
+  padding-block: 0.5rem;
+  cursor: pointer;
+}
+.education > .info > .school-container{
+  background-color: #444;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.school-container > button{
+  border:none;
+  padding: 0.5rem;
+  background:transparent;
+  color: #ddd;
+  cursor: pointer;
+}

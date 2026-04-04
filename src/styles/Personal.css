@@ -1,0 +1,48 @@
+.personal{
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 1rem;
+
+}
+.personal > .personal-title{
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.personal > .personal-content{
+  overflow: auto;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0.5rem;
+  padding-block-start: 0.5rem;
+  gap: 0.5rem;
+}
+.personal > .personal-content button{
+  border: none;
+  align-self: flex-end;
+  color: #ddd;
+  background-color: #444;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.inp-grp{
+  display: flex;
+  gap: 0.5rem;
+}
+.inp-grp > input{
+  outline: transparent;
+  background:transparent;
+  color: #ddd;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.2rem;
+}
+.personal > .personal-content > .btns{
+  display: flex;
+  gap: 0.5rem;
+  align-self: flex-end;
+}
