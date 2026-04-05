@@ -14,3 +14,11 @@ body,h1,h2,h3,h4,h5,h6,p{
   background-color: #333;
   color: #eee;
 }
+::placeholder {
+  color: rgb(131, 125, 125);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: red;
+}

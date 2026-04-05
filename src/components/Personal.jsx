@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../styles/Personal.css'
 
-function Content({personalDetails}){
+function Content({personalDetails,style}){
   const [isEditmode,setisEditMode] = useState(false)
   const [fullName,setFullName] = useState(personalDetails.personal?.fullName || "")
   const [email,setEmail] = useState(personalDetails.personal?.email || "")
@@ -16,15 +16,15 @@ function Content({personalDetails}){
         <>
         <div className='inp-grp'>
           <label htmlFor="fullName">Full Name: </label>
-          <input type="text" name="fullName" id="fullName" value={fullName} onChange={(e)=>setFullName(e.target.value)}/>
+          <input type="text" name="fullName" id="fullName" placeholder="eg. John Doe" value={fullName} onChange={(e)=>setFullName(e.target.value)}/>
         </div>
         <div className='inp-grp'>
           <label htmlFor="emailId">Email: </label>
-          <input type="text" name="emailId" id="emailId" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+          <input type="text" name="emailId" id="emailId" placeholder="eg. johndoe@gmail.com" value={email} onChange={(e)=>setEmail(e.target.value)}/>
         </div>
         <div className='inp-grp'>
           <label htmlFor="location">Location: </label>
-          <input type="text" name="location" id="location" value={location} onChange={(e)=>setLocation(e.target.value)}/>
+          <input type="text" name="location" id="location" placeholder="eg. Asia,Bangkok" value={location} onChange={(e)=>setLocation(e.target.value)}/>
         </div>
         <div className='btns'>
           <button onClick={()=>setisEditMode(false)} className='cancel'><i className='fa-solid fa-x'></i></button>
@@ -44,35 +44,27 @@ function Content({personalDetails}){
     }
   }
   return(
-    <div className='personal-content'>{renderContent()}</div>
+    <div className='personal-content' style={style}>{renderContent()}</div>
   )
 }
 
 function Personal({personalDetails}){
   const [isCollapsed,setIsCollapsed] = useState(true)
-
-  function renderContent(){
-    if(isCollapsed){
-      return (
-        <div onClick={()=>setIsCollapsed(false)} className='personal-title'>
+  return(
+    <div className='personal'>
+      {
+        isCollapsed ?  <div onClick={()=>setIsCollapsed(false)} className='personal-title'>
           <p>Personal Details</p>
           <i className='fa-solid fa-angle-down'></i>
-        </div>
-      )
-    }else{
-      return(
-      <>
-        <div onClick={()=>setIsCollapsed(true)} className='personal-title'>
+        </div> :         <div onClick={()=>setIsCollapsed(true)} className='personal-title'>
           <p>Personal Details</p>
           <i className='fa-solid fa-angle-up'></i>
         </div>
-        <Content personalDetails={personalDetails}/>
-      </>
-      )
-    }
-  }
-  return(
-    <div className='personal'>{renderContent()}</div>
+      }
+      {
+        isCollapsed ? <Content personalDetails={personalDetails} style={{display:"none"}}/> : <Content personalDetails={personalDetails} style={{display:"flex"}}   />
+      }    
+    </div>
   )
 }
 

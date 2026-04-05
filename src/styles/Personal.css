@@ -39,7 +39,7 @@
   color: #ddd;
   border: none;
   border-bottom: 1px solid #ddd;
-  font-size: 1.2rem;
+  font-size: inherit;
 }
 .personal > .personal-content > .btns{
   display: flex;

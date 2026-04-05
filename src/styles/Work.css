@@ -1,0 +1,75 @@
+.work{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.work > .work-title{
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.work > .work-content{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.work > .work-content > button{
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  color: #ddd;
+  cursor: pointer;
+}
+.work > .work-content > .work-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.work > .work-content > .work-item > button{
+  border: none;
+  background: transparent;
+  color: #ddd;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.work-content > .add-work--form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+}
+.work-content > .add-work--form > .btns{
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 0.5rem;
+  gap: 0.5rem;
+}
+.work-content > .add-work--form label{
+  cursor: pointer;
+}
+.work-content > .add-work--form > .btns > button{
+  background: #444;
+  color: #ddd;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.work-content > .add-work--form > .inp-grp > textarea{
+  background: #444;
+  color: #ddd;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  resize: vertical;
+  width: 100%;
+  font-family: inherit;
+}
